@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<!--ios和Android都支持-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--仅Android支持-->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+</head>
+<body>
+
+<input type="button" name="" onclick="launchFullscreen()" value="全屏">
+
+
+<script type="text/javascript">
+	function launchFullscreen() {
+      let element=document.documentElement;
+      if(element.requestFullscreen) {
+        element.requestFullscreen();
+      } else if(element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+      } else if(element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+      } else if(element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+      }
+    }
+</script>
+
+</body>
+</html>
